@@ -56,8 +56,10 @@ for (let ind = 0; ind < 6; ind++) {
       } else {alert('Sorry, you are out of attempts!')}
     }
 }
+console.log(answers[5])
 
 let randNum = (Math.floor(Math.random() * 100) + 1);
+console.log('the number is ' + randNum)
 alert('I am thinking of a number between 1 and 100...')
   for (let n = 0; n<5; n++) {
      answers[6] = prompt('Which number am I thinking of?');
@@ -66,7 +68,7 @@ alert('I am thinking of a number between 1 and 100...')
        n--
        continue
      }
-     if (answers[6] === randNum) {
+     if (answers[6] == randNum) {
        points++;
        break;
      } else if (answers[6] > randNum) {
