@@ -11,7 +11,8 @@ Oh, and it will have some fun pictures and snappy wordplay. I did say it would b
 To learn more about me.... uhh... read this code....
 
 ### Links and Resources
-
+Many many tricks from [w3Schools.](https://www.w3schools.com/)
+Delightful Photos provided by Amanda Boston
 
 ### Reflections and Comments
-
+I am really proud of the plan I came up with for looping through arrays to ask and answer my questions. I also did a ton of work in CSS during this lab, and both learned a ton about various features of CSS and also came out with a product I am pretty happy with. 
