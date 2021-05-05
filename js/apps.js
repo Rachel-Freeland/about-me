@@ -17,6 +17,7 @@ let questions = [//these will be the questions
   'Do I ever not wear blue shorts?',//I certainly don't want to.   
   'Am I capable of asking a question without a joke sewn in?',//I'm not even capable of making a serious comment on my code. 
 ];
+let answerKey =['no','yes','yes','yes','yes']
 let comments = [//these will be the comments after we tell the user their response
   "Maggie isn't the best dog there is, she's the best there has EVER BEEN",
   "I run tournaments for 5-7 stores at any given time when there isn't a pandemic",
@@ -26,11 +27,19 @@ let comments = [//these will be the comments after we tell the user their respon
 ];
 let answers = [];
 let n = 0;
+let points = 0
 alert("For each question, please answer yes or no.");
 for (n = 0; n<5; n++) {//This for loop will run through the above arrays while also adding to the answers array
 answers[n] = prompt(questions[n]);
 if (answers[n].toLowerCase() === 'yes' || answers[n].toLowerCase() === 'no') {//yes or no only, please. 
-alert("You answered " + answers[n] + ". \n\n" + comments[n]);
+  let correct = 'Incorrect!'
+  if (answerKey[n] == answers[n].toLowerCase()) {
+    correct = 'Correct!';
+    points++  }
+  console.log(answers[n])
+  alert("You answered " + answers[n] + ". "+ correct + "\n\n" + comments[n]);
 } else { //answer yes or no, OR ELSE
   alert('Please remember to answer with only yes or no');//seriously, only yes or no. 
-  n-- }}}
+  n-- }} 
+alert("Thank you for playing " + userName + ", your answers were:\n\n" + answers + "\n\n You got " + points + " answers correct."  )
+}
