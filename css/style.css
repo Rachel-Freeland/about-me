@@ -36,8 +36,15 @@ img {
 it {
   font-style: italic;
 }
+#bio {
+  display: flex;
+}
 #bio p {
   font-size: 1.4em;
+  background-color: honeydew;
+  border: 5px dimgrey solid;
+  padding:3px;
+  margin: 10px;
 }
 #steven {
   max-height: 350px;
@@ -52,3 +59,12 @@ it {
   color: dimgrey;
   size: 1em;
 }
+
+#game-flex-container {
+display: flex;
+}
+/* #game-flex-container article {} */
+#house-flex-container {
+display: flex;
+}
+/* #house-flex-container article {} */
