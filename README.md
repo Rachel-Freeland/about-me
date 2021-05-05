@@ -12,7 +12,7 @@ To learn more about me.... uhh... read this code....
 
 ### Links and Resources
 Many many tricks from [w3Schools.](https://www.w3schools.com/)
-Delightful Photos provided by Amanda Boston, and one more from https://www.pxfuel.com/
+Delightful Photos provided by Amanda Boston, and one more from [pxfuel](https://www.pxfuel.com/)
 
 ### Reflections and Comments
 #### Lab 02

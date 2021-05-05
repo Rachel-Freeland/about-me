@@ -76,3 +76,16 @@ alert('I am thinking of a number between 1 and 100...')
 alert('The answer was ' + randNum + '!')
 
 alert("Thank you for playing " + userName + ", your final answers were:\n\n" + answers + "\n\n You got " + points + " answers correct.")
+
+// Bonus Round: Sticky header!
+window.onscroll = function() {stickyBusiness()};
+let header = document.getElementById('stickyHeader');
+let stick = header.offsetTop;
+
+function stickyBusiness() {
+  if (window.pageYOffset > stick) {
+    header.classList.add('sticky');  
+  } else{
+    header.classList.remove('sticky');
+  }
+}

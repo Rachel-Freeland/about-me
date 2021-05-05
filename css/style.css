@@ -46,6 +46,16 @@ font-size: 1.1em;
 it {
   font-style: italic;
 }
+.sticky {
+  position:fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 80;
+}
+main {
+  padding-top: 80;
+}
+
 #bio {
   display: flex;
 }
