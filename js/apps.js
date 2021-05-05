@@ -1,45 +1,78 @@
 'use strict'
-grill(getName());//This is all we will actually be doing. Now to make that mean something. 
-// before we grill the user, lets greet them
-function getName() {
 let userName = prompt("Hello! What is your name?");
 console.log("user name is " + userName);
 alert("Welcome to my my page " + userName + ". My name is Steven Boston. Now for some trivia about me!");
-return userName //This isn't needed in the current build, but I was considering using the name in grill.
-};
-//Grab a tank of propane, it's time to barbecue!
-//We are grilling in the interrogation sense, to be clear.
-function grill(userName) {
+
 let questions = [//these will be the questions
   'Is my dog Maggie the best dog there is?',
   'Do I serve as a judge at magic tournaments?',
   'Do I play any instruments?',
   'Do I ever not wear blue shorts?',//I certainly don't want to.   
   'Am I capable of asking a question without a joke sewn in?',//I'm not even capable of making a serious comment on my code. 
+  'I mentioned I have played several woodwinds besides Saxophones, can you guess one?'
 ];
 let answerKey =['no','yes','yes','yes','yes']
 let comments = [//these will be the comments after we tell the user their response
   "Maggie isn't the best dog there is, she's the best there has EVER BEEN",
   "I run tournaments for 5-7 stores at any given time when there isn't a pandemic",
-  "I play of variety of woodwind instruments, primarily saxophone, though I haven't played seriously in many years.",
+  "I play of variety of woodwind instruments, primarily saxophones, though I haven't played seriously in many years.",
   "Many people who know me claim I only ever wear blue shorts, but I think I also have a pair of grey cargo shorts, so that is just clearly false.",
   "Of course I am! Did you think I was joking about Maggie?",//Hint: I wasn't
 ];
-let answers = [];
-let n = 0;
+let answers = [];//get a container for the answers set up
 let points = 0
 alert("For each question, please answer yes or no.");
-for (n = 0; n<5; n++) {//This for loop will run through the above arrays while also adding to the answers array
-answers[n] = prompt(questions[n]);
-if (answers[n].toLowerCase() === 'yes' || answers[n].toLowerCase() === 'no') {//yes or no only, please. 
-  let correct = 'Incorrect!'
-  if (answerKey[n] == answers[n].toLowerCase()) {
-    correct = 'Correct!';
-    points++  }
-  console.log(answers[n])
-  alert("You answered " + answers[n] + ". "+ correct + "\n\n" + comments[n]);
-} else { //answer yes or no, OR ELSE
-  alert('Please remember to answer with only yes or no');//seriously, only yes or no. 
-  n-- }} 
-alert("Thank you for playing " + userName + ", your answers were:\n\n" + answers + "\n\n You got " + points + " answers correct."  )
+for (let n = 0; n<5; n++) {//This for loop will run through the above arrays while also adding to the answers array
+  answers[n] = prompt(questions[n]);
+  if (answers[n].toLowerCase() === 'yes' || answers[n].toLowerCase() === 'no') {//yes or no only, please. 
+   let correct = 'Incorrect!'
+   if (answerKey[n] == answers[n].toLowerCase()) {
+     correct = 'Correct!';
+     points++  }
+   console.log(answers[n])
+   alert("You answered " + answers[n] + ". "+ correct + "\n\n" + comments[n]);
+  } else { //answer yes or no, OR ELSE
+   alert('Please remember to answer with only yes or no');//seriously, only yes or no. 
+   n-- }} 
+
+alert('Now for some more open-ended exercises')//numbers? words? it's pandemonium!
+alert('I mentioned before that I play saxophones...')
+let instruments = ['bass clarinet', 'ocarina', 'recorder']
+let tries = 6
+for (let ind = 0; ind < 6; ind++) {
+  answers[5] = prompt('what is a woodwind instrument I have played other than saxophones?')
+  for (let key = 0; key<instruments.length; key++) {//this loops through all correct answers and compares each one
+  if (answers[5].toLowerCase() == instruments[key]) {
+    alert(instruments[key] + ' is correct!');
+    points++;
+    ind = (ind+6);
+    break
+    }
+  }
+    if (ind<6) {
+      tries = (5-ind)
+      if (tries) {
+        alert("that isn't one of them! You have " + tries + " attempts remaining.")
+      } else {alert('Sorry, you are out of attempts!')}
+    }
 }
+
+let randNum = (Math.floor(Math.random() * 100) + 1);
+alert('I am thinking of a number between 1 and 100...')
+  for (let n = 0; n<5; n++) {
+     answers[6] = prompt('Which number am I thinking of?');
+     if (!(answers[6]/1)) { 
+       alert('numbers only please!')
+       n--
+       continue
+     }
+     if (answers[6] === randNum) {
+       points++;
+       break;
+     } else if (answers[6] > randNum) {
+       alert('Too High!');}
+       else {alert ('Too low!');}
+  }
+alert('The answer was ' + randNum + '!')
+
+alert("Thank you for playing " + userName + ", your final answers were:\n\n" + answers + "\n\n You got " + points + " answers correct.")

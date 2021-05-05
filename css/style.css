@@ -33,13 +33,30 @@ img {
   max-height: 200px;
   border: dimgrey solid 3px;
 }
+ul>li {
+list-style-type: square;
+margin-left: 25px;  
+}
+ol>li {
+list-style-type: decimal;
+margin-left: 25px;
+font-size: 1.1em;
+}
+
 it {
   font-style: italic;
 }
 #bio {
   display: flex;
 }
-#bio p {
+#work {
+  font-size: 1.4em;
+  background-color: honeydew;
+  border: 5px dimgrey solid;
+  padding:3px;
+  margin: 10px;
+}
+#bio>p {
   font-size: 1.4em;
   background-color: honeydew;
   border: 5px dimgrey solid;

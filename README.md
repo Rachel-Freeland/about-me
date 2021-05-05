@@ -12,7 +12,12 @@ To learn more about me.... uhh... read this code....
 
 ### Links and Resources
 Many many tricks from [w3Schools.](https://www.w3schools.com/)
-Delightful Photos provided by Amanda Boston
+Delightful Photos provided by Amanda Boston, and one more from https://www.pxfuel.com/
 
 ### Reflections and Comments
+#### Lab 02
 I am really proud of the plan I came up with for looping through arrays to ask and answer my questions. I also did a ton of work in CSS during this lab, and both learned a ton about various features of CSS and also came out with a product I am pretty happy with. 
+#### Lab 03 
+A little more code for the sake of assignment here, but it went pretty smoothly, the Javascript especially. 
+
+
