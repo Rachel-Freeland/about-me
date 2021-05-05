@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blanchedalmond;
+}
+header, footer{
+  background-color: dimgrey;
+  text-align: center;
+}
+h1, h2, h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1 {
+  font-size: 5em;
+  color:lightyellow;
+}
+h2 {
+  font-size: 3em;
+  text-align: center;
+}
+h4 {
+  font-size: 1.5em;
+  color:gray;
+}
+article {
+  border: 5px dimgrey solid;
+  background-color: honeydew;
+  max-width: 320px;
+  padding:10px 10px;
+  margin: 20px 30px;
+}
+img {
+  max-width: 280px;
+  max-height: 200px;
+  border: dimgrey solid 3px;
+}
+it {
+  font-style: italic;
+}
+#bio p {
+  font-size: 1.4em;
+}
+#steven {
+  max-height: 350px;
+  max-width: none;
+  display: inline;
+  margin: 10px;
+}
+#footer {
+  color: lightyellow;
+}
+#egg {
+  color: dimgrey;
+  size: 1em;
+}
