@@ -91,6 +91,10 @@ function guessNumber() {
   alert('The answer was ' + randNum + '!');
 }
 
+let userName = getName();
+binaryQuestions();
+instrumentQuestion();
+guessNumber();
 
 alert('Thank you for playing ' + userName + ', your final answers were:\n\n' + answers + '\n\n You got ' + points + ' answers correct.');
 
