@@ -70,25 +70,27 @@ function instrumentQuestion() {
   console.log(answers[5]);
 }
 
-
-let randNum = (Math.floor(Math.random() * 100) + 1);
-console.log('the number is ' + randNum);
-alert('I am thinking of a number between 1 and 100...');
-for (let n = 0; n<5; n++) {
-  answers[6] = prompt('Which number am I thinking of?');
-  if (!(answers[6]/1)) {
-    alert('numbers only please!');
-    n--;
-    continue;
+function guessNumber() {
+  let randNum = (Math.floor(Math.random() * 100) + 1);
+  console.log('the number is ' + randNum);
+  alert('I am thinking of a number between 1 and 100...');
+  for (let n = 0; n<5; n++) {
+    answers[6] = prompt('Which number am I thinking of?');
+    if (!(answers[6]/1)) {
+      alert('numbers only please!');
+      n--;
+      continue;
+    }
+    if (answers[6] === randNum) {
+      points++;
+      break;
+    } else if (answers[6] > randNum) {
+      alert('Too High!');}
+    else {alert ('Too low!');}
   }
-  if (answers[6] === randNum) {
-    points++;
-    break;
-  } else if (answers[6] > randNum) {
-    alert('Too High!');}
-  else {alert ('Too low!');}
+  alert('The answer was ' + randNum + '!');
 }
-alert('The answer was ' + randNum + '!');
+
 
 alert('Thank you for playing ' + userName + ', your final answers were:\n\n' + answers + '\n\n You got ' + points + ' answers correct.');
 
